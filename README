@@ -1,0 +1,3 @@
+This is a (currently incomplete) Javascript library for Node.js that aims to implement parsing Twitter messages as defined by Twitter's text conformance tests.
+
+http://github.com/mzsanford/twitter-text-conformance
