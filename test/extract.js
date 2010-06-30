@@ -299,12 +299,17 @@ assert.deepEqual(
 );
 
 
+// -- Test is currently disabled as it is unclear what is is supposed to be testing, 
+// -- there is disparity between the comment and the message, and message contains
+// -- a valid domain name.
 // DO NOT extract invalid URL: http://-begin_dash_2314352345_dfasd.foo-cow_4352.com.
+/*
 message = new twittertext.Message("text http://doman-dash_2314352345_dfasd.foo-cow_4352.com");
 assert.deepEqual(
     message.urls,
     []
 );
+*/
 
 
 // DO NOT extract invalid URL: http://no-tld.
