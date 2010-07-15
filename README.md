@@ -40,6 +40,6 @@ Finally, the library currently fails two tests.  They're pretty obscure so you m
 
 [1]: http://github.com/mzsanford/twitter-text-conformance
 [2]: http://github.com/mzsanford/twitter-text-conformance/blob/master/hit_highlighting.yml
-[3}: http://github.com/mzsanford/twitter-text-conformance/commit/50a54a8f39b34e5e2c4e374bab9348a787e82a26
+[3]: http://github.com/mzsanford/twitter-text-conformance/commit/50a54a8f39b34e5e2c4e374bab9348a787e82a26
 [4]: http://github.com/flother/twittertext/blob/master/test/autolink.js#L278
 [5]: http://github.com/flother/twittertext/blob/master/test/extract.js#L302
