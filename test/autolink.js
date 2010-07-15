@@ -286,11 +286,35 @@ assert.equal(
 );
 */
 
-// Autolink url surrounded by parentheses.
+// Autolink url surrounded by parentheses does not capture them.
 message = new twittertext.Message("text (http://example.com)");
 assert.equal(
     message.html,
     "text (<a href=\"http://example.com\">http://example.com</a>)"
+);
+
+
+// Autolink url with path surrounded by parentheses does not capture them.
+message = new twittertext.Message("text (http://example.com/test)");
+assert.equal(
+    message.html,
+    "text (<a href=\"http://example.com/test\">http://example.com/test</a>)"
+);
+
+
+// Autolink url with embedded parentheses.
+message = new twittertext.Message("text http://msdn.com/S(deadbeef)/page.htm");
+assert.equal(
+    message.html,
+    "text <a href=\"http://msdn.com/S(deadbeef)/page.htm\">http://msdn.com/S(deadbeef)/page.htm</a>"
+);
+
+
+// Autolink url should NOT capture unbalanced parentheses.
+message = new twittertext.Message("Parenthetically bad http://example.com/i_has_a_) thing");
+assert.equal(
+    message.html,
+    "Parenthetically bad <a href=\"http://example.com/i_has_a_\">http://example.com/i_has_a_</a>) thing"
 );
 
 
