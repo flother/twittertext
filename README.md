@@ -2,20 +2,20 @@ TwitterText is two things.  Firstly, it's a copy of Twitter's own [text conforma
 
 If that hasn't got you excited perhaps an example will.
 
-    # Import the module.
+    // Import the module.
     var twittertext = require("twittertext");
-    # Create a Twitter message.
+    // Create a Twitter message.
     var message = twittertext.Message("@riggbot Look at this example message with @replies, #hashtags, and mentions: @borgar @bengoldacre @stephenfry");
-    # Which users were mentioned in the message?
+    // Which users were mentioned in the message?
     message.mentions;
     ["riggbot", "replies", "borgar", "bengoldacre", "stephenfry"]
-    # What hashtags were there?
+    // What hashtags were there?
     message.hashtags
     ["hashtags"]
-    # Was it a reply to someone?
+    // Was it a reply to someone?
     message.replies
     ["riggbot"]
-    # Did it include any URLs?
+    // Did it include any URLs?
     message.urls
     []
 
