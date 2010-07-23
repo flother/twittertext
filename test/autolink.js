@@ -259,6 +259,30 @@ assert.equal(
 );
 
 
+// DO NOT Autolink hashtag with accented character at the start.
+message = new twittertext.Message("#éhashtag");
+assert.equal(
+    message.html,
+    "#éhashtag"
+);
+
+
+// Autolink hashtag with accented character at the end.
+message = new twittertext.Message("#hashtagé");
+assert.equal(
+    message.html,
+    "<a href=\"http://twitter.com/search?q=%23hashtag%C3%A9\" title=\"#hashtagé\" class=\"tweet-url hashtag\">#hashtagé</a>"
+);
+
+
+// Autolink hashtag with accented character in the middle.
+message = new twittertext.Message("#hashétag");
+assert.equal(
+    message.html,
+    "<a href=\"http://twitter.com/search?q=%23hash%C3%A9tag\" title=\"#hashétag\" class=\"tweet-url hashtag\">#hashétag</a>"
+);
+
+
 // Autolink trailing url.
 message = new twittertext.Message("text http://example.com");
 assert.equal(
