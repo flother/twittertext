@@ -644,3 +644,11 @@ assert.equal(
     message.html,
     "Check out: <a href=\"http://example.com/test\">http://example.com/test</a>&@<a class=\"tweet-url username\" href=\"http://twitter.com/chasesechrist\">chasesechrist</a>"
 );
+
+
+// Currently handles URL follower directly by @user.
+message = new twittertext.Message("See: http://example.com/@user");
+assert.equal(
+    message.html,
+    "See: <a href=\"http://example.com/\">http://example.com/</a>@<a class=\"tweet-url username\" href=\"http://twitter.com/user\">user</a>"
+);
