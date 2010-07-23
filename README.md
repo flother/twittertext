@@ -31,11 +31,10 @@ First, the library doesn't include the ["hit highlighting" tests] [2].  The hit 
 
 Secondly, we don't include support for [hashtag indices] [3].  Again, they're neither useful nor interesting.
 
-Finally, the library currently fails three tests.  They're pretty obscure so you may not even notice the missing functionality (and we are aiming to pass them eventually) but if you're worried you can see them in the code:
+Finally, the library currently fails two tests.  They're pretty obscure so you may not even notice the missing functionality (and we are aiming to pass them eventually) but if you're worried you can see them in the code:
 
 1. Missing test one: [auto-link URL within Japanese text] [4]
 2. Missing test two: [do not extract a URL starting with a dash] [5]
-3. Missing test three: [don't allow @ characters in the middle of URLs] [6]
 
 (Note that the second failure is not a limitation of this library but due to an bug in the test itself.)
 
