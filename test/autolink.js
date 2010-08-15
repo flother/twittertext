@@ -334,6 +334,14 @@ assert.equal(
 );
 
 
+// Autolink url with balanced parens hiding XSS.
+message = new twittertext.Message('text http://foo.bar/("onclick="alert(1)")');
+assert.equal(
+    message.html,
+    'text <a href="http://foo.bar/">http://foo.bar/</a>("onclick="alert(1)")'
+);
+
+
 // Autolink url should NOT capture unbalanced parentheses.
 message = new twittertext.Message("Parenthetically bad http://example.com/i_has_a_) thing");
 assert.equal(
