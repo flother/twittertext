@@ -31,17 +31,13 @@ First, the library doesn't include the ["hit highlighting" tests] [2].  The hit 
 
 Secondly, we don't include support for [hashtag indices] [3].  Again, they're neither useful nor interesting.
 
-Finally, the library currently fails three tests.  They're pretty obscure so you may not even notice the missing functionality (and we are aiming to pass them eventually) but if you're worried you can see them in the code:
+Finally, the library currently fails two tests.  They're pretty obscure so you may not even notice the missing functionality (and we are aiming to pass them eventually) but if you're worried you can see them in the code:
 
 1. Missing test one: [auto-link URL within Japanese text] [4]
-2. Missing test two: [do not extract a URL starting with a dash] [5]
-3. Missing test three: [don't allow @ characters in the middle of URLs] [6]
-
-(Note that the second failure is not a limitation of this library but due to an bug in the test itself.)
+2. Missing test three: [don't allow @ characters in the middle of URLs] [5]
 
 [1]: http://github.com/mzsanford/twitter-text-conformance
 [2]: http://github.com/mzsanford/twitter-text-conformance/blob/master/hit_highlighting.yml
 [3]: http://github.com/mzsanford/twitter-text-conformance/commit/50a54a8f39b34e5e2c4e374bab9348a787e82a26
 [4]: http://github.com/flother/twittertext/blob/master/test/autolink.js#L278
-[5]: http://github.com/flother/twittertext/blob/master/test/extract.js#L302
-[6]: http://github.com/flother/twittertext/blob/master/test/autolink.js#L649
+[5]: http://github.com/flother/twittertext/blob/master/test/autolink.js#L649
